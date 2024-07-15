@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .country-list .country-flag {
+            width: 25px;
+            height: 20px;
+            /* border: 1px solid red; */
+            background-image: url(./country.png);
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .country-list .country-name {
+            margin-right: 10px;
+        }
+        .country-list li {
+            list-style: decimal;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="country-list">
+        <li data-flag-key="flag_no_0" class="country"  data-country-code="af">
+            <div class="country-flag af"></div><span class="country-name">Afghanistan</span><span class="dial-code">+93</span>
+        </li>
+        <li data-flag-key="flag_no_1" class="country"  data-country-code="al">
+            <div class="country-flag al"></div><span class="country-name">Albania</span><span class="dial-code">+355</span>
+        </li>
+        <li data-flag-key="flag_no_2" class="country highlight"  data-country-code="dz"
+            aria-selected="true">
+            <div class="country-flag dz"></div><span class="country-name">Algeria</span><span class="dial-code">+213</span>
+        </li>
+        <li data-flag-key="flag_no_3" class="country"  data-country-code="ad">
+            <div class="country-flag ad"></div><span class="country-name">Andorra</span><span class="dial-code">+376</span>
+        </li>
+        <li data-flag-key="flag_no_4" class="country"  data-country-code="ao">
+            <div class="country-flag ao"></div><span class="country-name">Angola</span><span class="dial-code">+244</span>
+        </li>
+        <li data-flag-key="flag_no_5" class="country"  data-country-code="ag">
+            <div class="country-flag ag"></div><span class="country-name">Antigua and Barbuda</span><span
+                class="dial-code">+1268</span>
+        </li>
+        <li data-flag-key="flag_no_6" class="country"  data-country-code="ar">
+            <div class="country-flag ar"></div><span class="country-name">Argentina</span><span class="dial-code">+54</span>
+        </li>
+        <li data-flag-key="flag_no_7" class="country"  data-country-code="am">
+            <div class="country-flag am"></div><span class="country-name">Armenia</span><span class="dial-code">+374</span>
+        </li>
+        <li data-flag-key="flag_no_8" class="country"  data-country-code="aw">
+            <div class="country-flag aw"></div><span class="country-name">Aruba</span><span class="dial-code">+297</span>
+        </li>
+        <li data-flag-key="flag_no_9" class="country"  data-country-code="au">
+            <div class="country-flag au"></div><span class="country-name">Australia</span><span class="dial-code">+61</span>
+        </li>
+        <li data-flag-key="flag_no_10" class="country"  data-country-code="at">
+            <div class="country-flag at"></div><span class="country-name">Austria</span><span class="dial-code">+43</span>
+        </li>
+        <li data-flag-key="flag_no_11" class="country"  data-country-code="az">
+            <div class="country-flag az"></div><span class="country-name">Azerbaijan</span><span class="dial-code">+994</span>
+        </li>
+        <li data-flag-key="flag_no_12" class="country"  data-country-code="bs">
+            <div class="country-flag bs"></div><span class="country-name">Bahamas</span><span class="dial-code">+1242</span>
+        </li>
+        <li data-flag-key="flag_no_13" class="country"  data-country-code="bh">
+            <div class="country-flag bh"></div><span class="country-name">Bahrain</span><span class="dial-code">+973</span>
+        </li>
+        <li data-flag-key="flag_no_14" class="country"  data-country-code="bd">
+            <div class="country-flag bd"></div><span class="country-name">Bangladesh</span><span class="dial-code">+880</span>
+        </li>
+        <li data-flag-key="flag_no_15" class="country"  data-country-code="bb">
+            <div class="country-flag bb"></div><span class="country-name">Barbados</span><span class="dial-code">+1246</span>
+        </li>
+        <li data-flag-key="flag_no_16" class="country"  data-country-code="by">
+            <div class="country-flag by"></div><span class="country-name">Belarus</span><span class="dial-code">+375</span>
+        </li>
+        <li data-flag-key="flag_no_17" class="country"  data-country-code="be">
+            <div class="country-flag be"></div><span class="country-name">Belgium</span><span class="dial-code">+32</span>
+        </li>
+        <li data-flag-key="flag_no_18" class="country"  data-country-code="bz">
+            <div class="country-flag bz"></div><span class="country-name">Belize</span><span class="dial-code">+501</span>
+        </li>
+        <li data-flag-key="flag_no_19" class="country"  data-country-code="bj">
+            <div class="country-flag bj"></div><span class="country-name">Benin</span><span class="dial-code">+229</span>
+        </li>
+        <li data-flag-key="flag_no_20" class="country"  data-country-code="bt">
+            <div class="country-flag bt"></div><span class="country-name">Bhutan</span><span class="dial-code">+975</span>
+        </li>
+        <li data-flag-key="flag_no_21" class="country"  data-country-code="bo">
+            <div class="country-flag bo"></div><span class="country-name">Bolivia</span><span class="dial-code">+591</span>
+        </li>
+        <li data-flag-key="flag_no_22" class="country"  data-country-code="ba">
+            <div class="country-flag ba"></div><span class="country-name">Bosnia and Herzegovina</span><span
+                class="dial-code">+387</span>
+        </li>
+        <li data-flag-key="flag_no_23" class="country"  data-country-code="bw">
+            <div class="country-flag bw"></div><span class="country-name">Botswana</span><span class="dial-code">+267</span>
+        </li>
+        <li data-flag-key="flag_no_24" class="country"  data-country-code="br">
+            <div class="country-flag br"></div><span class="country-name">Brazil</span><span class="dial-code">+55</span>
+        </li>
+        <li data-flag-key="flag_no_25" class="country"  data-country-code="io">
+            <div class="country-flag io"></div><span class="country-name">British Indian Ocean Territory</span><span
+                class="dial-code">+246</span>
+        </li>
+        <li data-flag-key="flag_no_26" class="country"  data-country-code="bn">
+            <div class="country-flag bn"></div><span class="country-name">Brunei</span><span class="dial-code">+673</span>
+        </li>
+        <li data-flag-key="flag_no_27" class="country"  data-country-code="bg">
+            <div class="country-flag bg"></div><span class="country-name">Bulgaria</span><span class="dial-code">+359</span>
+        </li>
+        <li data-flag-key="flag_no_28" class="country"  data-country-code="bf">
+            <div class="country-flag bf"></div><span class="country-name">Burkina Faso</span><span class="dial-code">+226</span>
+        </li>
+        <li data-flag-key="flag_no_29" class="country"  data-country-code="bi">
+            <div class="country-flag bi"></div><span class="country-name">Burundi</span><span class="dial-code">+257</span>
+        </li>
+        <li data-flag-key="flag_no_30" class="country"  data-country-code="kh">
+            <div class="country-flag kh"></div><span class="country-name">Cambodia</span><span class="dial-code">+855</span>
+        </li>
+        <li data-flag-key="flag_no_31" class="country"  data-country-code="cm">
+            <div class="country-flag cm"></div><span class="country-name">Cameroon</span><span class="dial-code">+237</span>
+        </li>
+        <li data-flag-key="flag_no_32" class="country"  data-country-code="ca">
+            <div class="country-flag ca"></div><span class="country-name">Canada</span><span class="dial-code">+1</span>
+        </li>
+        <li data-flag-key="flag_no_33" class="country"  data-country-code="cv">
+            <div class="country-flag cv"></div><span class="country-name">Cape Verde</span><span class="dial-code">+238</span>
+        </li>
+        <li data-flag-key="flag_no_34" class="country"  data-country-code="bq">
+            <div class="country-flag bq"></div><span class="country-name">Caribbean Netherlands</span><span
+                class="dial-code">+599</span>
+        </li>
+        <li data-flag-key="flag_no_35" class="country"  data-country-code="cf">
+            <div class="country-flag cf"></div><span class="country-name">Central African Republic</span><span
+                class="dial-code">+236</span>
+        </li>
+        <li data-flag-key="flag_no_36" class="country"  data-country-code="td">
+            <div class="country-flag td"></div><span class="country-name">Chad</span><span class="dial-code">+235</span>
+        </li>
+        <li data-flag-key="flag_no_37" class="country"  data-country-code="cl">
+            <div class="country-flag cl"></div><span class="country-name">Chile</span><span class="dial-code">+56</span>
+        </li>
+        <li data-flag-key="flag_no_38" class="country"  data-country-code="cn">
+            <div class="country-flag cn"></div><span class="country-name">China</span><span class="dial-code">+86</span>
+        </li>
+        <li data-flag-key="flag_no_39" class="country"  data-country-code="co">
+            <div class="country-flag co"></div><span class="country-name">Colombia</span><span class="dial-code">+57</span>
+        </li>
+        <li data-flag-key="flag_no_40" class="country"  data-country-code="km">
+            <div class="country-flag km"></div><span class="country-name">Comoros</span><span class="dial-code">+269</span>
+        </li>
+        <li data-flag-key="flag_no_41" class="country"  data-country-code="cd">
+            <div class="country-flag cd"></div><span class="country-name">Congo</span><span class="dial-code">+243</span>
+        </li>
+        <li data-flag-key="flag_no_42" class="country"  data-country-code="cg">
+            <div class="country-flag cg"></div><span class="country-name">Congo</span><span class="dial-code">+242</span>
+        </li>
+        <li data-flag-key="flag_no_43" class="country"  data-country-code="cr">
+            <div class="country-flag cr"></div><span class="country-name">Costa Rica</span><span class="dial-code">+506</span>
+        </li>
+        <li data-flag-key="flag_no_44" class="country"  data-country-code="ci">
+            <div class="country-flag ci"></div><span class="country-name">Côte d’Ivoire</span><span
+                class="dial-code">+225</span>
+        </li>
+        <li data-flag-key="flag_no_45" class="country"  data-country-code="hr">
+            <div class="country-flag hr"></div><span class="country-name">Croatia</span><span class="dial-code">+385</span>
+        </li>
+        <li data-flag-key="flag_no_46" class="country"  data-country-code="cu">
+            <div class="country-flag cu"></div><span class="country-name">Cuba</span><span class="dial-code">+53</span>
+        </li>
+        <li data-flag-key="flag_no_47" class="country"  data-country-code="cw">
+            <div class="country-flag cw"></div><span class="country-name">Curaçao</span><span class="dial-code">+599</span>
+        </li>
+        <li data-flag-key="flag_no_48" class="country"  data-country-code="cy">
+            <div class="country-flag cy"></div><span class="country-name">Cyprus</span><span class="dial-code">+357</span>
+        </li>
+        <li data-flag-key="flag_no_49" class="country"  data-country-code="cz">
+            <div class="country-flag cz"></div><span class="country-name">Czech Republic</span><span
+                class="dial-code">+420</span>
+        </li>
+        <li data-flag-key="flag_no_50" class="country"  data-country-code="dk">
+            <div class="country-flag dk"></div><span class="country-name">Denmark</span><span class="dial-code">+45</span>
+        </li>
+        <li data-flag-key="flag_no_51" class="country"  data-country-code="dj">
+            <div class="country-flag dj"></div><span class="country-name">Djibouti</span><span class="dial-code">+253</span>
+        </li>
+        <li data-flag-key="flag_no_52" class="country"  data-country-code="dm">
+            <div class="country-flag dm"></div><span class="country-name">Dominica</span><span class="dial-code">+1767</span>
+        </li>
+        <li data-flag-key="flag_no_53" class="country"  data-country-code="do">
+            <div class="country-flag do"></div><span class="country-name">Dominican Republic</span><span
+                class="dial-code">+1</span>
+        </li>
+        <li data-flag-key="flag_no_54" class="country"  data-country-code="ec">
+            <div class="country-flag ec"></div><span class="country-name">Ecuador</span><span class="dial-code">+593</span>
+        </li>
+        <li data-flag-key="flag_no_55" class="country"  data-country-code="eg">
+            <div class="country-flag eg"></div><span class="country-name">Egypt</span><span class="dial-code">+20</span>
+        </li>
+        <li data-flag-key="flag_no_56" class="country"  data-country-code="sv">
+            <div class="country-flag sv"></div><span class="country-name">El Salvador</span><span class="dial-code">+503</span>
+        </li>
+        <li data-flag-key="flag_no_57" class="country"  data-country-code="gq">
+            <div class="country-flag gq"></div><span class="country-name">Equatorial Guinea</span><span
+                class="dial-code">+240</span>
+        </li>
+        <li data-flag-key="flag_no_58" class="country"  data-country-code="er">
+            <div class="country-flag er"></div><span class="country-name">Eritrea</span><span class="dial-code">+291</span>
+        </li>
+        <li data-flag-key="flag_no_59" class="country"  data-country-code="ee">
+            <div class="country-flag ee"></div><span class="country-name">Estonia</span><span class="dial-code">+372</span>
+        </li>
+        <li data-flag-key="flag_no_60" class="country"  data-country-code="et">
+            <div class="country-flag et"></div><span class="country-name">Ethiopia</span><span class="dial-code">+251</span>
+        </li>
+        <li data-flag-key="flag_no_61" class="country"  data-country-code="fj">
+            <div class="country-flag fj"></div><span class="country-name">Fiji</span><span class="dial-code">+679</span>
+        </li>
+        <li data-flag-key="flag_no_62" class="country"  data-country-code="fi">
+            <div class="country-flag fi"></div><span class="country-name">Finland</span><span class="dial-code">+358</span>
+        </li>
+        <li data-flag-key="flag_no_63" class="country"  data-country-code="fr">
+            <div class="country-flag fr"></div><span class="country-name">France</span><span class="dial-code">+33</span>
+        </li>
+        <li data-flag-key="flag_no_64" class="country"  data-country-code="gf">
+            <div class="country-flag gf"></div><span class="country-name">French Guiana</span><span
+                class="dial-code">+594</span>
+        </li>
+        <li data-flag-key="flag_no_65" class="country"  data-country-code="pf">
+            <div class="country-flag pf"></div><span class="country-name">French Polynesia</span><span
+                class="dial-code">+689</span>
+        </li>
+        <li data-flag-key="flag_no_66" class="country"  data-country-code="ga">
+            <div class="country-flag ga"></div><span class="country-name">Gabon</span><span class="dial-code">+241</span>
+        </li>
+        <li data-flag-key="flag_no_67" class="country"  data-country-code="gm">
+            <div class="country-flag gm"></div><span class="country-name">Gambia</span><span class="dial-code">+220</span>
+        </li>
+        <li data-flag-key="flag_no_68" class="country"  data-country-code="ge">
+            <div class="country-flag ge"></div><span class="country-name">Georgia</span><span class="dial-code">+995</span>
+        </li>
+        <li data-flag-key="flag_no_69" class="country"  data-country-code="de">
+            <div class="country-flag de"></div><span class="country-name">Germany</span><span class="dial-code">+49</span>
+        </li>
+        <li data-flag-key="flag_no_70" class="country"  data-country-code="gh">
+            <div class="country-flag gh"></div><span class="country-name">Ghana</span><span class="dial-code">+233</span>
+        </li>
+        <li data-flag-key="flag_no_71" class="country"  data-country-code="gr">
+            <div class="country-flag gr"></div><span class="country-name">Greece</span><span class="dial-code">+30</span>
+        </li>
+        <li data-flag-key="flag_no_72" class="country"  data-country-code="gd">
+            <div class="country-flag gd"></div><span class="country-name">Grenada</span><span class="dial-code">+1473</span>
+        </li>
+        <li data-flag-key="flag_no_73" class="country"  data-country-code="gp">
+            <div class="country-flag gp"></div><span class="country-name">Guadeloupe</span><span class="dial-code">+590</span>
+        </li>
+        <li data-flag-key="flag_no_74" class="country"  data-country-code="gu">
+            <div class="country-flag gu"></div><span class="country-name">Guam</span><span class="dial-code">+1671</span>
+        </li>
+        <li data-flag-key="flag_no_75" class="country"  data-country-code="gt">
+            <div class="country-flag gt"></div><span class="country-name">Guatemala</span><span class="dial-code">+502</span>
+        </li>
+        <li data-flag-key="flag_no_76" class="country"  data-country-code="gn">
+            <div class="country-flag gn"></div><span class="country-name">Guinea</span><span class="dial-code">+224</span>
+        </li>
+        <li data-flag-key="flag_no_77" class="country"  data-country-code="gw">
+            <div class="country-flag gw"></div><span class="country-name">Guinea-Bissau</span><span
+                class="dial-code">+245</span>
+        </li>
+        <li data-flag-key="flag_no_78" class="country"  data-country-code="gy">
+            <div class="country-flag gy"></div><span class="country-name">Guyana</span><span class="dial-code">+592</span>
+        </li>
+        <li data-flag-key="flag_no_79" class="country"  data-country-code="ht">
+            <div class="country-flag ht"></div><span class="country-name">Haiti</span><span class="dial-code">+509</span>
+        </li>
+        <li data-flag-key="flag_no_80" class="country"  data-country-code="hn">
+            <div class="country-flag hn"></div><span class="country-name">Honduras</span><span class="dial-code">+504</span>
+        </li>
+        <li data-flag-key="flag_no_81" class="country"  data-country-code="hk">
+            <div class="country-flag hk"></div><span class="country-name">Hong Kong</span><span class="dial-code">+852</span>
+        </li>
+        <li data-flag-key="flag_no_82" class="country"  data-country-code="hu">
+            <div class="country-flag hu"></div><span class="country-name">Hungary</span><span class="dial-code">+36</span>
+        </li>
+        <li data-flag-key="flag_no_83" class="country"  data-country-code="is">
+            <div class="country-flag is"></div><span class="country-name">Iceland</span><span class="dial-code">+354</span>
+        </li>
+        <li data-flag-key="flag_no_84" class="country"  data-country-code="in">
+            <div class="country-flag in"></div><span class="country-name">India</span><span class="dial-code">+91</span>
+        </li>
+        <li data-flag-key="flag_no_85" class="country"  data-country-code="id">
+            <div class="country-flag id"></div><span class="country-name">Indonesia</span><span class="dial-code">+62</span>
+        </li>
+        <li data-flag-key="flag_no_86" class="country"  data-country-code="ir">
+            <div class="country-flag ir"></div><span class="country-name">Iran</span><span class="dial-code">+98</span>
+        </li>
+        <li data-flag-key="flag_no_87" class="country"  data-country-code="iq">
+            <div class="country-flag iq"></div><span class="country-name">Iraq</span><span class="dial-code">+964</span>
+        </li>
+        <li data-flag-key="flag_no_88" class="country"  data-country-code="ie">
+            <div class="country-flag ie"></div><span class="country-name">Ireland</span><span class="dial-code">+353</span>
+        </li>
+        <li data-flag-key="flag_no_89" class="country"  data-country-code="il">
+            <div class="country-flag il"></div><span class="country-name">Israel</span><span class="dial-code">+972</span>
+        </li>
+        <li data-flag-key="flag_no_90" class="country"  data-country-code="it">
+            <div class="country-flag it"></div><span class="country-name">Italy</span><span class="dial-code">+39</span>
+        </li>
+        <li data-flag-key="flag_no_91" class="country"  data-country-code="jm">
+            <div class="country-flag jm"></div><span class="country-name">Jamaica</span><span class="dial-code">+1876</span>
+        </li>
+        <li data-flag-key="flag_no_92" class="country"  data-country-code="jp">
+            <div class="country-flag jp"></div><span class="country-name">Japan</span><span class="dial-code">+81</span>
+        </li>
+        <li data-flag-key="flag_no_93" class="country"  data-country-code="jo">
+            <div class="country-flag jo"></div><span class="country-name">Jordan</span><span class="dial-code">+962</span>
+        </li>
+        <li data-flag-key="flag_no_94" class="country"  data-country-code="kz">
+            <div class="country-flag kz"></div><span class="country-name">Kazakhstan</span><span class="dial-code">+7</span>
+        </li>
+        <li data-flag-key="flag_no_95" class="country"  data-country-code="ke">
+            <div class="country-flag ke"></div><span class="country-name">Kenya</span><span class="dial-code">+254</span>
+        </li>
+        <li data-flag-key="flag_no_96" class="country"  data-country-code="ki">
+            <div class="country-flag ki"></div><span class="country-name">Kiribati</span><span class="dial-code">+686</span>
+        </li>
+        <li data-flag-key="flag_no_97" class="country"  data-country-code="xk">
+            <div class="country-flag xk"></div><span class="country-name">Kosovo</span><span class="dial-code">+383</span>
+        </li>
+        <li data-flag-key="flag_no_98" class="country"  data-country-code="kw">
+            <div class="country-flag kw"></div><span class="country-name">Kuwait</span><span class="dial-code">+965</span>
+        </li>
+        <li data-flag-key="flag_no_99" class="country"  data-country-code="kg">
+            <div class="country-flag kg"></div><span class="country-name">Kyrgyzstan</span><span class="dial-code">+996</span>
+        </li>
+        <li data-flag-key="flag_no_100" class="country"  data-country-code="la">
+            <div class="country-flag la"></div><span class="country-name">Laos</span><span class="dial-code">+856</span>
+        </li>
+        <li data-flag-key="flag_no_101" class="country"  data-country-code="lv">
+            <div class="country-flag lv"></div><span class="country-name">Latvia</span><span class="dial-code">+371</span>
+        </li>
+        <li data-flag-key="flag_no_102" class="country"  data-country-code="lb">
+            <div class="country-flag lb"></div><span class="country-name">Lebanon</span><span class="dial-code">+961</span>
+        </li>
+        <li data-flag-key="flag_no_103" class="country"  data-country-code="ls">
+            <div class="country-flag ls"></div><span class="country-name">Lesotho</span><span class="dial-code">+266</span>
+        </li>
+        <li data-flag-key="flag_no_104" class="country"  data-country-code="lr">
+            <div class="country-flag lr"></div><span class="country-name">Liberia</span><span class="dial-code">+231</span>
+        </li>
+        <li data-flag-key="flag_no_105" class="country"  data-country-code="ly">
+            <div class="country-flag ly"></div><span class="country-name">Libya</span><span class="dial-code">+218</span>
+        </li>
+        <li data-flag-key="flag_no_106" class="country"  data-country-code="li">
+            <div class="country-flag li"></div><span class="country-name">Liechtenstein</span><span
+                class="dial-code">+423</span>
+        </li>
+        <li data-flag-key="flag_no_107" class="country"  data-country-code="lt">
+            <div class="country-flag lt"></div><span class="country-name">Lithuania</span><span class="dial-code">+370</span>
+        </li>
+        <li data-flag-key="flag_no_108" class="country"  data-country-code="lu">
+            <div class="country-flag lu"></div><span class="country-name">Luxembourg</span><span class="dial-code">+352</span>
+        </li>
+        <li data-flag-key="flag_no_109" class="country"  data-country-code="mo">
+            <div class="country-flag mo"></div><span class="country-name">Macau</span><span class="dial-code">+853</span>
+        </li>
+        <li data-flag-key="flag_no_110" class="country"  data-country-code="mk">
+            <div class="country-flag mk"></div><span class="country-name">Macedonia</span><span class="dial-code">+389</span>
+        </li>
+        <li data-flag-key="flag_no_111" class="country"  data-country-code="mg">
+            <div class="country-flag mg"></div><span class="country-name">Madagascar</span><span class="dial-code">+261</span>
+        </li>
+        <li data-flag-key="flag_no_112" class="country"  data-country-code="mw">
+            <div class="country-flag mw"></div><span class="country-name">Malawi</span><span class="dial-code">+265</span>
+        </li>
+        <li data-flag-key="flag_no_113" class="country"  data-country-code="my">
+            <div class="country-flag my"></div><span class="country-name">Malaysia</span><span class="dial-code">+60</span>
+        </li>
+        <li data-flag-key="flag_no_114" class="country"  data-country-code="mv">
+            <div class="country-flag mv"></div><span class="country-name">Maldives</span><span class="dial-code">+960</span>
+        </li>
+        <li data-flag-key="flag_no_115" class="country"  data-country-code="ml">
+            <div class="country-flag ml"></div><span class="country-name">Mali</span><span class="dial-code">+223</span>
+        </li>
+        <li data-flag-key="flag_no_116" class="country"  data-country-code="mt">
+            <div class="country-flag mt"></div><span class="country-name">Malta</span><span class="dial-code">+356</span>
+        </li>
+        <li data-flag-key="flag_no_117" class="country"  data-country-code="mh">
+            <div class="country-flag mh"></div><span class="country-name">Marshall Islands</span><span
+                class="dial-code">+692</span>
+        </li>
+        <li data-flag-key="flag_no_118" class="country"  data-country-code="mq">
+            <div class="country-flag mq"></div><span class="country-name">Martinique</span><span class="dial-code">+596</span>
+        </li>
+        <li data-flag-key="flag_no_119" class="country"  data-country-code="mr">
+            <div class="country-flag mr"></div><span class="country-name">Mauritania</span><span class="dial-code">+222</span>
+        </li>
+        <li data-flag-key="flag_no_120" class="country"  data-country-code="mu">
+            <div class="country-flag mu"></div><span class="country-name">Mauritius</span><span class="dial-code">+230</span>
+        </li>
+        <li data-flag-key="flag_no_121" class="country"  data-country-code="mx">
+            <div class="country-flag mx"></div><span class="country-name">Mexico</span><span class="dial-code">+52</span>
+        </li>
+        <li data-flag-key="flag_no_122" class="country"  data-country-code="fm">
+            <div class="country-flag fm"></div><span class="country-name">Micronesia</span><span class="dial-code">+691</span>
+        </li>
+        <li data-flag-key="flag_no_123" class="country"  data-country-code="md">
+            <div class="country-flag md"></div><span class="country-name">Moldova</span><span class="dial-code">+373</span>
+        </li>
+        <li data-flag-key="flag_no_124" class="country"  data-country-code="mc">
+            <div class="country-flag mc"></div><span class="country-name">Monaco</span><span class="dial-code">+377</span>
+        </li>
+        <li data-flag-key="flag_no_125" class="country"  data-country-code="mn">
+            <div class="country-flag mn"></div><span class="country-name">Mongolia</span><span class="dial-code">+976</span>
+        </li>
+        <li data-flag-key="flag_no_126" class="country"  data-country-code="me">
+            <div class="country-flag me"></div><span class="country-name">Montenegro</span><span class="dial-code">+382</span>
+        </li>
+        <li data-flag-key="flag_no_127" class="country"  data-country-code="ma">
+            <div class="country-flag ma"></div><span class="country-name">Morocco</span><span class="dial-code">+212</span>
+        </li>
+        <li data-flag-key="flag_no_128" class="country"  data-country-code="mz">
+            <div class="country-flag mz"></div><span class="country-name">Mozambique</span><span class="dial-code">+258</span>
+        </li>
+        <li data-flag-key="flag_no_129" class="country"  data-country-code="mm">
+            <div class="country-flag mm"></div><span class="country-name">Myanmar</span><span class="dial-code">+95</span>
+        </li>
+        <li data-flag-key="flag_no_130" class="country"  data-country-code="na">
+            <div class="country-flag na"></div><span class="country-name">Namibia</span><span class="dial-code">+264</span>
+        </li>
+        <li data-flag-key="flag_no_131" class="country"  data-country-code="nr">
+            <div class="country-flag nr"></div><span class="country-name">Nauru</span><span class="dial-code">+674</span>
+        </li>
+        <li data-flag-key="flag_no_132" class="country"  data-country-code="np">
+            <div class="country-flag np"></div><span class="country-name">Nepal</span><span class="dial-code">+977</span>
+        </li>
+        <li data-flag-key="flag_no_133" class="country"  data-country-code="nl">
+            <div class="country-flag nl"></div><span class="country-name">Netherlands</span><span class="dial-code">+31</span>
+        </li>
+        <li data-flag-key="flag_no_134" class="country"  data-country-code="nc">
+            <div class="country-flag nc"></div><span class="country-name">New Caledonia</span><span
+                class="dial-code">+687</span>
+        </li>
+        <li data-flag-key="flag_no_135" class="country"  data-country-code="nz">
+            <div class="country-flag nz"></div><span class="country-name">New Zealand</span><span class="dial-code">+64</span>
+        </li>
+        <li data-flag-key="flag_no_136" class="country"  data-country-code="ni">
+            <div class="country-flag ni"></div><span class="country-name">Nicaragua</span><span class="dial-code">+505</span>
+        </li>
+        <li data-flag-key="flag_no_137" class="country"  data-country-code="ne">
+            <div class="country-flag ne"></div><span class="country-name">Niger</span><span class="dial-code">+227</span>
+        </li>
+        <li data-flag-key="flag_no_138" class="country"  data-country-code="ng">
+            <div class="country-flag ng"></div><span class="country-name">Nigeria</span><span class="dial-code">+234</span>
+        </li>
+        <li data-flag-key="flag_no_139" class="country"  data-country-code="kp">
+            <div class="country-flag kp"></div><span class="country-name">North Korea</span><span class="dial-code">+850</span>
+        </li>
+        <li data-flag-key="flag_no_140" class="country"  data-country-code="no">
+            <div class="country-flag no"></div><span class="country-name">Norway</span><span class="dial-code">+47</span>
+        </li>
+        <li data-flag-key="flag_no_141" class="country"  data-country-code="om">
+            <div class="country-flag om"></div><span class="country-name">Oman</span><span class="dial-code">+968</span>
+        </li>
+        <li data-flag-key="flag_no_142" class="country"  data-country-code="pk">
+            <div class="country-flag pk"></div><span class="country-name">Pakistan</span><span class="dial-code">+92</span>
+        </li>
+        <li data-flag-key="flag_no_143" class="country"  data-country-code="pw">
+            <div class="country-flag pw"></div><span class="country-name">Palau</span><span class="dial-code">+680</span>
+        </li>
+        <li data-flag-key="flag_no_144" class="country"  data-country-code="ps">
+            <div class="country-flag ps"></div><span class="country-name">Palestine</span><span class="dial-code">+970</span>
+        </li>
+        <li data-flag-key="flag_no_145" class="country"  data-country-code="pa">
+            <div class="country-flag pa"></div><span class="country-name">Panama</span><span class="dial-code">+507</span>
+        </li>
+        <li data-flag-key="flag_no_146" class="country"  data-country-code="pg">
+            <div class="country-flag pg"></div><span class="country-name">Papua New Guinea</span><span
+                class="dial-code">+675</span>
+        </li>
+        <li data-flag-key="flag_no_147" class="country"  data-country-code="py">
+            <div class="country-flag py"></div><span class="country-name">Paraguay</span><span class="dial-code">+595</span>
+        </li>
+        <li data-flag-key="flag_no_148" class="country"  data-country-code="pe">
+            <div class="country-flag pe"></div><span class="country-name">Peru</span><span class="dial-code">+51</span>
+        </li>
+        <li data-flag-key="flag_no_149" class="country"  data-country-code="ph">
+            <div class="country-flag ph"></div><span class="country-name">Philippines</span><span class="dial-code">+63</span>
+        </li>
+        <li data-flag-key="flag_no_150" class="country"  data-country-code="pl">
+            <div class="country-flag pl"></div><span class="country-name">Poland</span><span class="dial-code">+48</span>
+        </li>
+        <li data-flag-key="flag_no_151" class="country"  data-country-code="pt">
+            <div class="country-flag pt"></div><span class="country-name">Portugal</span><span class="dial-code">+351</span>
+        </li>
+        <li data-flag-key="flag_no_152" class="country"  data-country-code="pr">
+            <div class="country-flag pr"></div><span class="country-name">Puerto Rico</span><span class="dial-code">+1</span>
+        </li>
+        <li data-flag-key="flag_no_153" class="country"  data-country-code="qa">
+            <div class="country-flag qa"></div><span class="country-name">Qatar</span><span class="dial-code">+974</span>
+        </li>
+        <li data-flag-key="flag_no_154" class="country"  data-country-code="re">
+            <div class="country-flag re"></div><span class="country-name">Réunion</span><span class="dial-code">+262</span>
+        </li>
+        <li data-flag-key="flag_no_155" class="country"  data-country-code="ro">
+            <div class="country-flag ro"></div><span class="country-name">Romania</span><span class="dial-code">+40</span>
+        </li>
+        <li data-flag-key="flag_no_156" class="country"  data-country-code="ru">
+            <div class="country-flag ru"></div><span class="country-name">Russia</span><span class="dial-code">+7</span>
+        </li>
+        <li data-flag-key="flag_no_157" class="country"  data-country-code="rw">
+            <div class="country-flag rw"></div><span class="country-name">Rwanda</span><span class="dial-code">+250</span>
+        </li>
+        <li data-flag-key="flag_no_158" class="country"  data-country-code="kn">
+            <div class="country-flag kn"></div><span class="country-name">Saint Kitts and Nevis</span><span
+                class="dial-code">+1869</span>
+        </li>
+        <li data-flag-key="flag_no_159" class="country"  data-country-code="lc">
+            <div class="country-flag lc"></div><span class="country-name">Saint Lucia</span><span class="dial-code">+1758</span>
+        </li>
+        <li data-flag-key="flag_no_160" class="country"  data-country-code="vc">
+            <div class="country-flag vc"></div><span class="country-name">Saint Vincent and the Grenadines</span><span
+                class="dial-code">+1784</span>
+        </li>
+        <li data-flag-key="flag_no_161" class="country"  data-country-code="ws">
+            <div class="country-flag ws"></div><span class="country-name">Samoa</span><span class="dial-code">+685</span>
+        </li>
+        <li data-flag-key="flag_no_162" class="country"  data-country-code="sm">
+            <div class="country-flag sm"></div><span class="country-name">San Marino</span><span class="dial-code">+378</span>
+        </li>
+        <li data-flag-key="flag_no_163" class="country"  data-country-code="st">
+            <div class="country-flag st"></div><span class="country-name">São Tomé and Príncipe</span><span
+                class="dial-code">+239</span>
+        </li>
+        <li data-flag-key="flag_no_164" class="country"  data-country-code="sa">
+            <div class="country-flag sa"></div><span class="country-name">Saudi Arabia</span><span class="dial-code">+966</span>
+        </li>
+        <li data-flag-key="flag_no_165" class="country"  data-country-code="sn">
+            <div class="country-flag sn"></div><span class="country-name">Senegal</span><span class="dial-code">+221</span>
+        </li>
+        <li data-flag-key="flag_no_166" class="country"  data-country-code="rs">
+            <div class="country-flag rs"></div><span class="country-name">Serbia</span><span class="dial-code">+381</span>
+        </li>
+        <li data-flag-key="flag_no_167" class="country"  data-country-code="sc">
+            <div class="country-flag sc"></div><span class="country-name">Seychelles</span><span class="dial-code">+248</span>
+        </li>
+        <li data-flag-key="flag_no_168" class="country"  data-country-code="sl">
+            <div class="country-flag sl"></div><span class="country-name">Sierra Leone</span><span class="dial-code">+232</span>
+        </li>
+        <li data-flag-key="flag_no_169" class="country"  data-country-code="sg">
+            <div class="country-flag sg"></div><span class="country-name">Singapore</span><span class="dial-code">+65</span>
+        </li>
+        <li data-flag-key="flag_no_170" class="country"  data-country-code="sk">
+            <div class="country-flag sk"></div><span class="country-name">Slovakia</span><span class="dial-code">+421</span>
+        </li>
+        <li data-flag-key="flag_no_171" class="country"  data-country-code="si">
+            <div class="country-flag si"></div><span class="country-name">Slovenia</span><span class="dial-code">+386</span>
+        </li>
+        <li data-flag-key="flag_no_172" class="country"  data-country-code="sb">
+            <div class="country-flag sb"></div><span class="country-name">Solomon Islands</span><span
+                class="dial-code">+677</span>
+        </li>
+        <li data-flag-key="flag_no_173" class="country"  data-country-code="so">
+            <div class="country-flag so"></div><span class="country-name">Somalia</span><span class="dial-code">+252</span>
+        </li>
+        <li data-flag-key="flag_no_174" class="country"  data-country-code="za">
+            <div class="country-flag za"></div><span class="country-name">South Africa</span><span class="dial-code">+27</span>
+        </li>
+        <li data-flag-key="flag_no_175" class="country"  data-country-code="kr">
+            <div class="country-flag kr"></div><span class="country-name">South Korea</span><span class="dial-code">+82</span>
+        </li>
+        <li data-flag-key="flag_no_176" class="country"  data-country-code="ss">
+            <div class="country-flag ss"></div><span class="country-name">South Sudan</span><span class="dial-code">+211</span>
+        </li>
+        <li data-flag-key="flag_no_177" class="country"  data-country-code="es">
+            <div class="country-flag es"></div><span class="country-name">Spain</span><span class="dial-code">+34</span>
+        </li>
+        <li data-flag-key="flag_no_178" class="country"  data-country-code="lk">
+            <div class="country-flag lk"></div><span class="country-name">Sri Lanka</span><span class="dial-code">+94</span>
+        </li>
+        <li data-flag-key="flag_no_179" class="country"  data-country-code="sd">
+            <div class="country-flag sd"></div><span class="country-name">Sudan</span><span class="dial-code">+249</span>
+        </li>
+        <li data-flag-key="flag_no_180" class="country"  data-country-code="sr">
+            <div class="country-flag sr"></div><span class="country-name">Suriname</span><span class="dial-code">+597</span>
+        </li>
+        <li data-flag-key="flag_no_181" class="country"  data-country-code="sz">
+            <div class="country-flag sz"></div><span class="country-name">Swaziland</span><span class="dial-code">+268</span>
+        </li>
+        <li data-flag-key="flag_no_182" class="country"  data-country-code="se">
+            <div class="country-flag se"></div><span class="country-name">Sweden</span><span class="dial-code">+46</span>
+        </li>
+        <li data-flag-key="flag_no_183" class="country"  data-country-code="ch">
+            <div class="country-flag ch"></div><span class="country-name">Switzerland</span><span class="dial-code">+41</span>
+        </li>
+        <li data-flag-key="flag_no_184" class="country"  data-country-code="sy">
+            <div class="country-flag sy"></div><span class="country-name">Syria</span><span class="dial-code">+963</span>
+        </li>
+        <li data-flag-key="flag_no_185" class="country"  data-country-code="tw">
+            <div class="country-flag tw"></div><span class="country-name">Taiwan</span><span class="dial-code">+886</span>
+        </li>
+        <li data-flag-key="flag_no_186" class="country"  data-country-code="tj">
+            <div class="country-flag tj"></div><span class="country-name">Tajikistan</span><span class="dial-code">+992</span>
+        </li>
+        <li data-flag-key="flag_no_187" class="country"  data-country-code="tz">
+            <div class="country-flag tz"></div><span class="country-name">Tanzania</span><span class="dial-code">+255</span>
+        </li>
+        <li data-flag-key="flag_no_188" class="country"  data-country-code="th">
+            <div class="country-flag th"></div><span class="country-name">Thailand</span><span class="dial-code">+66</span>
+        </li>
+        <li data-flag-key="flag_no_189" class="country"  data-country-code="tl">
+            <div class="country-flag tl"></div><span class="country-name">Timor-Leste</span><span class="dial-code">+670</span>
+        </li>
+        <li data-flag-key="flag_no_190" class="country"  data-country-code="tg">
+            <div class="country-flag tg"></div><span class="country-name">Togo</span><span class="dial-code">+228</span>
+        </li>
+        <li data-flag-key="flag_no_191" class="country"  data-country-code="to">
+            <div class="country-flag to"></div><span class="country-name">Tonga</span><span class="dial-code">+676</span>
+        </li>
+        <li data-flag-key="flag_no_192" class="country"  data-country-code="tt">
+            <div class="country-flag tt"></div><span class="country-name">Trinidad and Tobago</span><span
+                class="dial-code">+1868</span>
+        </li>
+        <li data-flag-key="flag_no_193" class="country"  data-country-code="tn">
+            <div class="country-flag tn"></div><span class="country-name">Tunisia</span><span class="dial-code">+216</span>
+        </li>
+        <li data-flag-key="flag_no_194" class="country"  data-country-code="tr">
+            <div class="country-flag tr"></div><span class="country-name">Turkey</span><span class="dial-code">+90</span>
+        </li>
+        <li data-flag-key="flag_no_195" class="country"  data-country-code="tm">
+            <div class="country-flag tm"></div><span class="country-name">Turkmenistan</span><span class="dial-code">+993</span>
+        </li>
+        <li data-flag-key="flag_no_196" class="country"  data-country-code="tv">
+            <div class="country-flag tv"></div><span class="country-name">Tuvalu</span><span class="dial-code">+688</span>
+        </li>
+        <li data-flag-key="flag_no_197" class="country"  data-country-code="ug">
+            <div class="country-flag ug"></div><span class="country-name">Uganda</span><span class="dial-code">+256</span>
+        </li>
+        <li data-flag-key="flag_no_198" class="country"  data-country-code="ua">
+            <div class="country-flag ua"></div><span class="country-name">Ukraine</span><span class="dial-code">+380</span>
+        </li>
+        <li data-flag-key="flag_no_199" class="country"  data-country-code="ae">
+            <div class="country-flag ae"></div><span class="country-name">United Arab Emirates</span><span
+                class="dial-code">+971</span>
+        </li>
+        <li data-flag-key="flag_no_200" class="country preferred" 
+            data-country-code="gb">
+            <div class="country-flag gb"></div><span class="country-name">United Kingdom</span><span
+                class="dial-code">+44</span>
+        </li>
+        <li data-flag-key="flag_no_201" class="country preferred active" 
+            data-country-code="us">
+            <div class="country-flag us"></div><span class="country-name">United States</span><span class="dial-code">+1</span>
+        </li>
+        <li data-flag-key="flag_no_202" class="country"  data-country-code="uy">
+            <div class="country-flag uy"></div><span class="country-name">Uruguay</span><span class="dial-code">+598</span>
+        </li>
+        <li data-flag-key="flag_no_203" class="country"  data-country-code="uz">
+            <div class="country-flag uz"></div><span class="country-name">Uzbekistan</span><span class="dial-code">+998</span>
+        </li>
+        <li data-flag-key="flag_no_204" class="country"  data-country-code="vu">
+            <div class="country-flag vu"></div><span class="country-name">Vanuatu</span><span class="dial-code">+678</span>
+        </li>
+        <li data-flag-key="flag_no_205" class="country"  data-country-code="va">
+            <div class="country-flag va"></div><span class="country-name">Vatican City</span><span class="dial-code">+39</span>
+        </li>
+        <li data-flag-key="flag_no_206" class="country"  data-country-code="ve">
+            <div class="country-flag ve"></div><span class="country-name">Venezuela</span><span class="dial-code">+58</span>
+        </li>
+        <li data-flag-key="flag_no_207" class="country"  data-country-code="vn">
+            <div class="country-flag vn"></div><span class="country-name">Vietnam</span><span class="dial-code">+84</span>
+        </li>
+        <li data-flag-key="flag_no_208" class="country"  data-country-code="ye">
+            <div class="country-flag ye"></div><span class="country-name">Yemen</span><span class="dial-code">+967</span>
+        </li>
+        <li data-flag-key="flag_no_209" class="country"  data-country-code="zm">
+            <div class="country-flag zm"></div><span class="country-name">Zambia</span><span class="dial-code">+260</span>
+        </li>
+        <li data-flag-key="flag_no_210" class="country"  data-country-code="zw">
+            <div class="country-flag zw"></div><span class="country-name">Zimbabwe</span><span class="dial-code">+263</span>
+        </li>
+    </ul>
+</body>
+<script>
+
+    function countryList() {
+        let countryListEl = document.querySelector('.country-list');
+        if (!countryListEl) {
+            return false;
+        }
+
+        let countryEl = countryListEl.querySelectorAll("li");
+        if (!countryListEl) {
+            return false;
+        }
+
+        countryEl.forEach((elItem, key) => {
+
+            let flagDivEl = elItem.querySelector("div.flag");
+
+            if (!flagDivEl) {
+                return;
+            }
+
+            let countryShort = flagDivEl.className.split(" ")[1];
+
+            console.log(key, countryShort)
+
+        });
+
+    }
+    countryList();
+
+
+</script>
+
+</html>
